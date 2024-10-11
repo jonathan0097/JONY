@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociedad Digital</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        body {
+            /* Degradado de tres colores */
+            background: linear-gradient(45deg, #ff6347, #4682b4, #32cd32);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .info-section {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .imagen-centrada {
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ff4500;
+        }
+
+    </style>
+    <script>
+        function toggleInfo(id) {
+            const info = document.getElementById(id);
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Sociedad Digital</h1>
+        <p>Explorando el impacto de la tecnología en nuestra sociedad</p>
+    </header>
+
+    <div class="welcome-section">
+        <h2>¡Bienvenido a la Sociedad Digital!</h2>
+        <p>Descubre cómo la tecnología está transformando el mundo en el que vivimos. Explora, aprende y participa en la conversación sobre el futuro digital.</p>
+    </div>
+
+    <nav>
+        <a href="#introduccion">Acerca de</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#futuro">Futuro</a>
+        <a href="#Noticias">Noticias</a>
+    </nav>
+
+    <main>
+        <section id="introduccion" class="info-section">
+            <h2>Acerca de la sociedad digital</h2>
+            <img src="https://otech.uaeh.edu.mx/noti/wp-content/uploads/2019/04/Notic.5-6.jpg" alt="Descripción de la imagen" width="300" height="200" class="imagen-centrada">
+            <button onclick="toggleInfo('info-introduccion')">Leer más</button>
+            <p id="info-introduccion">
+              La sociedad digital se refiere a una forma de organización social y económica basada en la amplia adopción de tecnologías digitales. Esta transformación ha cambiado la manera en que nos comunicamos, trabajamos, y vivimos, creando nuevas oportunidades y desafíos.
+            </p>    
+        </section>
+
+        <section id="impacto" class="info-section">
+            <h2>Impacto de la Sociedad Digital</h2>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7LHtUnw9rSePPsnp3_iQlGGPFSL2uS3WeQq-Uv4dDtORWqRA8AWouRLF4mDNZbZ-hS5JCryNiaQSHCNkwl72kcQ6uSpx3XFK2Zzpeu_XX4dLeO2vsv-60By_QG0KFHBtYy0SxGQwZOtyK/s1600/ventajas-de-utilizar-redes-sociales-560x350.jpg" alt="Descripción de la imagen" width="300" height="200" class="imagen-centrada">
+            <button onclick="toggleInfo('info-impacto')">Leer más</button>
+            <p id="info-impacto">El impacto de la sociedad digital es inmenso, afectando todos los aspectos de la vida cotidiana. Ha democratizado el acceso a la información, ha impulsado la economía digital, y ha transformado sectores como la educación, la salud, y el entretenimiento. Sin embargo, también plantea retos en términos de privacidad, seguridad y brechas digitales.</p>
+        </section>
+
+        <section id="futuro" class="info-section">
+            <h2>El Futuro de la Sociedad Digital</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0KCljn3bwJXKWTHXPAXFyLwIRm-HviW3YCw&s" alt="Descripción de la imagen" width="300" height="200" class="imagen-centrada">
+            <button onclick="toggleInfo('info-futuro')">Leer más</button>
+            <p id="info-futuro">El futuro de la sociedad digital promete cambios profundos y transformadores, gracias al desarrollo continuo de tecnologías avanzadas como la inteligencia artificial (IA), la realidad aumentada (RA) y el blockchain. Estas tecnologías están revolucionando la manera en que interactuamos con el mundo, abriendo nuevas oportunidades en sectores como la educación, la salud, el comercio y el entretenimiento.</p>
+        </section>
+
+        <section id="Noticias" class="info-section">
+            <h2>Noticias de la tecnología</h2>
+            <img src="https://www.portalmeta.org.py/media/images/internet-social-media-network-digital_1.max-900x500.jpg" alt="Descripción de la imagen" width="300" height="200" class="imagen-centrada">
+            <button onclick="toggleInfo('info-Noticias')">Leer más</button>
+            <p id="info-Noticias">El próximo evento de Apple, programado para el 9 de septiembre, se espera que presente el iPhone 16, junto con los nuevos AirPods 4, que contarán con una mejora en la calidad de sonido, tallos más cortos y carga USB-C. Además, el evento podría incluir actualizaciones para el Apple Watch Series 10 y, posiblemente, la segunda generación de los AirPods Max. También es posible que se anuncie el iPad Mini 7.</p>
+          
+  <h2>Inteligencia Artificial</h2>        
+          
+          <p>Ramas de la IA</p>
+          
+          <p>Aprendizaje automatico: El aprendizaje automático es un subcampo de la inteligencia artificial que se enfoca en el desarrollo de algoritmos y modelos que permiten a las máquinas aprender de datos y mejorar su rendimiento.</p>
+
+          <p>APlicaciones: Tipos de Aprendizaje Automático</p>
+            
+<p>Aprendizaje supervisado: El modelo de aprendizaje automático se entrena con datos etiquetados, es decir, con datos que tienen una respuesta o etiqueta asociada.</p>
+            
+<p>Aprendizaje no supervisado: El modelo de aprendizaje automático se entrena con datos no etiquetados, es decir, sin respuestas o etiquetas asociadas. El objetivo es que el modelo descubra patrones.</p>
+            
+<p>Aprendizaje por refuerzo: El modelo de aprendizaje automático se entrena a través de interacciones con un entorno, recibiendo recompensas o castigos por sus acciones.</p>
+          
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0KCljn3bwJXKWTHXPAXFyLwIRm-HviW3YCw&s" alt="Descripción de la imagen" width="300" height="200" class="imagen-centrada">
+          
+           <h2>Prcesamiento Leneguaje Natural</h2>  
+          
+          <p>Procesamiento de Lenguaje Natural (NLP): Definición y Aplicaciones
+
+El Procesamiento de Lenguaje Natural es una subdisciplina de la IA que se enfoca en el estudio y desarrollo de algoritmos.
+
+El NLP se basa en la intersección de la lingüística, la informática y la inteligencia artificial, y tiene como objetivo desarrollar sistemas que puedan interactuar con los seres humanos.
+
+Aplicaciones del NLP
+
+El NLP tiene una amplia gama de aplicaciones en various áreas, incluyendo:
+
+Asistentes virtuales: Sistemas como Siri, Google Assistant y Alexa utilizan NLP para entender y responder a las preguntas y comandos del usuario.
+Traducción automática: Herramientas como Google Translate y Microsoft Translator utilizan NLP.
+Análisis de sentimiento: El NLP se utiliza para analizar el sentimiento y la opinión.
+Reconocimiento de voz: El NLP se utiliza en sistemas de reconocimiento de voz para controlar dispositivos y aplicaciones.
+Chatbots: Los chatbots utilizan NLP para interactuar con los usuarios.
+Summarización de texto: El NLP se utiliza para resumir grandes.
+Generación de texto: El NLP se utiliza para generar texto automáticamente.
+Análisis de texto: El NLP se utiliza para analizar grandes cantidades de texto y extraer info.
+ <etc class=""></etc>
+.</p>
+          
+           <img src=https://tse4.mm.bing.net/th/id/OIP.VZDx6PQFUf5u-sTbpseVrgHaDR?rs=1&pid=ImgDetMainwidth="300" height="200" class="imagen-centrada">
+          
+          
+           <h2>Supervisado, no supervisado, refuerzo</h2>  
+          
+          <p>Tipos de Aprendizaje de Máquina: Supervisado, No Supervisado y Refuerzo.<p/>
+
+<p>El aprendizaje de máquina es un campo de la inteligencia artificial que se enfoca en el desarrollo de algoritmos y técnicas que permiten a las computadoras aprender de datos y mejorar su rendimiento en tareas específicas. Hay tres tipos principales de aprendizaje de máquina: supervisado, no supervisado y refuerzo.<p/>
+
+<p>Aprendizaje Supervisado<p/>
+
+<p>El aprendizaje supervisado es un tipo de aprendizaje de máquina en el que el algoritmo aprende de un conjunto de datos etiquetados. Los datos etiquetados son aquellos que tienen una salida o respuesta conocida, y el objetivo del algoritmo es aprender a predecir la salida correcta para nuevos datos.<p/>
+
+<p>Ventajas: El aprendizaje supervisado es útil para tareas como la clasificación y la regresión, y puede ser muy preciso si se tiene un conjunto de datos grande y diverso.<p/>
+<p>Desventajas: El aprendizaje supervisado requiere un conjunto de datos etiquetados, lo que puede ser costoso y difícil de obtener.<p/>
+<p>Aprendizaje No Supervisado<p/>
+
+<p>El aprendizaje no supervisado es un tipo de aprendizaje de máquina en el que el algoritmo aprende de un conjunto de datos sin etiquetas. El objetivo del algoritmo es descubrir patrones y estructuras en los datos.<p/>
+
+<p>Ventajas: El aprendizaje no supervisado es útil para tareas como la agrupación y la reducción de dimensionalidad, y no requiere un conjunto de datos etiquetados.
+Desventajas: El aprendizaje no supervisado puede ser más difícil de interpretar que el aprendizaje supervisado, y puede requerir más datos para obtener resultados precisos.<p/>
+
+<p>Aprendizaje por Refuerzo<p/>
+
+<p>El aprendizaje por refuerzo es un tipo de aprendizaje de máquina en el que el algoritmo aprende a tomar decisiones en un entorno dinámico. El objetivo del algoritmo es maximizar una recompensa o minimizar una penalización.<p/>
+
+<p>Ventajas: El aprendizaje por refuerzo es útil para tareas como la toma de decisiones y el control de procesos, y puede ser muy efectivo en entornos dinámicos.<p/>
+<p>Desventajas: El aprendizaje por refuerzo puede ser más difícil de implementar que otros tipos de aprendizaje de máquina, y requiere un entorno de simulación o un entorno real para funcionar.
+Ejemplos de Aplicaciones<p/>
+
+<p>Aprendizaje Supervisado: Clasificación de imágenes, reconocimiento de voz, predicción de precios de acciones.<p/>
+<p>Aprendizaje No Supervisado: Agrupación de clientes, reducción de dimensionalidad de datos, detección de anomalías.<p/>
+<p>En resumen, el aprendizaje supervisado es útil para tareas que requieren una salida precisa, el aprendizaje no supervisado es útil para tareas que requieren descubrir patrones y estructuras, y el aprendizaje por refuerzo es útil para tareas que requieren tomar decisiones en un entorno dinámico.<p/>
+          <iframe src="https://www.youtube.com/embed/oNDWAO6Yqbg" title="Ciencia de Datos (Aprendizaje Automático) #4: Algoritmos del Aprendizaje Supervisado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> width="988" height="556" </iframe>
+          
+          <iframe src="https://www.youtube.com/embed/NdNyYcAJQr8" title="Qué es aprendizaje automático o machine learning | Nuevas tecnologías" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>width="988" height="556" </iframe>
+          <iframe src="https://www.youtube.com/embed/u0s9qJjJyrM" title="Algoritmo de aprendizaje por refuerzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>width="857" height="556" </iframe>
+          <h3> Aspectos y desafio de la IA<h/>
+<p> Sesgo en los algoritmos<p/>
+
+<p>Los algoritmos de la IA pueden contener sesgos inherentes que pueden afectar negativamente a ciertos grupos de personas. Estos sesgos pueden surgir de various sources, incluyendo:<p/>
+
+<p>Datos de entrenamiento sesgados: si los datos utilizados para entrenar a un algoritmo de IA son sesgados, el algoritmo también lo será.
+Programación sesgada: los programadores pueden introducir sesgos inconscientes en el código del algoritmo.<p/>
+<p>Falta de diversidad en el desarrollo: si el equipo de desarrollo de la IA no es diverso, es posible que no se consideren las perspectivas y necesidades de todos los grupos de personas.<p/>
+
+<p>Sesgo en los algoritmos<p/>
+
+<p>Los algoritmos de la IA pueden contener sesgos inherentes que pueden afectar negativamente a ciertos grupos de personas. Estos sesgos pueden surgir de various sources, incluyendo:<p/>
+
+<p>Datos de entrenamiento sesgados: si los datos utilizados para entrenar a un algoritmo de IA son sesgados, el algoritmo también lo será.
+Programación sesgada: los programadores pueden introducir sesgos inconscientes en el código del algoritmo.<p/>
+<p>Falta de diversidad en el desarrollo: si el equipo de desarrollo de la IA no es diverso, es posible que no se consideren las perspectivas y necesidades de todos los grupos de personas.<p/>
+
+<p>Privacidad y vigilancia<p/>
+
+<p>La IA puede recopilar y analizar grandes cantidades de datos personales, lo que plantea preocupaciones sobre la privacidad y la vigilancia. Es importante establecer regulaciones y protocolos para proteger la privacidad de los individuos y evitar la vigilancia masiva.<p/>
+
+<p>Algunos desafíos en este área incluyen:<p/>
+
+<p>Proteger la privacidad de los datos personales
+Evitar la vigilancia masiva y la explotación de datos
+Establecer regulaciones y protocolos para el uso de la IA en la recopilación y análisis de datos personales<p/>
+<p>Impacto en el empleo y la sociedad<p/>
+
+<p>La IA puede tener un impacto significativo en el empleo y la sociedad, tanto positivo como negativo. Algunos desafíos en este área incluyen:<p/>
+
+<p>Automatización del trabajo: la IA puede reemplazar a los trabajadores en ciertas industrias, lo que puede llevar a la pérdida de empleos.<p/>
+
+<p>Es importante abordar estos desafíos para asegurarse de que la IA sea beneficiosa para todos y no solo para unos pocos.<p/>
+   <p>Privacidad y vigilancia<p/>
+
+La IA puede recopilar y analizar grandes cantidades de datos personales<p/>
+</p>
+          
+         
+          
+          
+          
+      
+       
+        </section>
+</html>
+
+    
+    </main>
